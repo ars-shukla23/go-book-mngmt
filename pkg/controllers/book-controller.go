@@ -24,7 +24,7 @@ func GetAllBooks(w http.ResponseWriter, r *http.Request){
 
 func GetBookByID(w http.ResponseWriter, r *http.Request){
 	vars:=mux.Vars(r)
-	bookId:=vars["bookId"]
+	bookId:=vars["BookId"]
 	Id,err:=strconv.ParseInt(bookId,0,0)
 	if err!=nil{
 		fmt.Println("Error while parsing")
@@ -49,7 +49,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request){
 
 func DeleteBook(w http.ResponseWriter, r *http.Request){
 	vars:=mux.Vars(r)
-	bookId:=vars["bookId"]
+	bookId:=vars["BookId"]
 	Id,err:=strconv.ParseInt(bookId,0,0)
 	if err!=nil{
 		fmt.Println("Error while parsing")
